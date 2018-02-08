@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="es.formacion.cip.diego.entertainment.Films">
+
+        <id name="id" type="java.lang.Integer">
+            <generator class="identity" />
+        </id>
+
+        <property name="name" column = "name" type = "string"/>
+        <property name="date" column = "date" type = "string"/>
+        <property name="rate" column = "rate" type = "double"/>
+
+
+    </class>
+</hibernate-mapping>

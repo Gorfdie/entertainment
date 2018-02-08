@@ -9,15 +9,11 @@
  */
 package org.hibernate.dialect;
 
-import java.sql.Types;
-
-import org.hibernate.dialect.function.AbstractAnsiTrimEmulationFunction;
-import org.hibernate.dialect.function.NoArgSQLFunction;
-import org.hibernate.dialect.function.SQLFunction;
-import org.hibernate.dialect.function.SQLFunctionTemplate;
-import org.hibernate.dialect.function.StandardSQLFunction;
-import org.hibernate.dialect.function.VarArgsSQLFunction;
+import org.hibernate.dialect.Dialect;
+import org.hibernate.dialect.function.*;
 import org.hibernate.type.StandardBasicTypes;
+
+import java.sql.Types;
 
 public class SQLiteDialect extends Dialect {
   public SQLiteDialect() {
@@ -43,7 +39,11 @@ public class SQLiteDialect extends Dialect {
     registerColumnType(Types.BLOB, "blob");
     registerColumnType(Types.CLOB, "clob");
     registerColumnType(Types.BOOLEAN, "boolean");
+
+    //registerFunction( "abs", new StandardSQLFunction("abs") );
     registerFunction( "concat", new VarArgsSQLFunction(StandardBasicTypes.STRING, "", "||", "") );
+    //registerFunction( "length", new StandardSQLFunction("length", StandardBasicTypes.LONG) );
+    //registerFunction( "lower", new StandardSQLFunction("lower") );
     registerFunction( "mod", new SQLFunctionTemplate(StandardBasicTypes.INTEGER, "?1 % ?2" ) );
     registerFunction( "quote", new StandardSQLFunction("quote", StandardBasicTypes.STRING) );
     registerFunction( "random", new NoArgSQLFunction("random", StandardBasicTypes.INTEGER) );
