@@ -3,7 +3,7 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="es.formacion.cip.diego.model.Films">
+    <class name="es.formacion.cip.diego.model.Series">
 
         <id name="id" type="java.lang.Integer">
             <generator class="identity" />
@@ -12,6 +12,8 @@
         <property name="name" column = "name" type = "string"/>
         <property name="date" column = "date" type = "string"/>
         <property name="rate" column = "rate" type = "double"/>
+        <property name="temporade" column = "temporade" type = "int"/>
+
 
 
     </class>

@@ -1,4 +1,4 @@
-package es.formacion.cip.diego.entertainment;
+package es.formacion.cip.diego.model;
 
 import javax.persistence.*;
 

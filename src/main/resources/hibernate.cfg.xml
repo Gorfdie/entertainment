@@ -12,7 +12,7 @@
         <property name="format_sql">true</property>
         <property name="dialect">org.hibernate.dialect.SQLiteDialect</property>
         <property name="connection.driver_class">org.sqlite.JDBC</property>
-        <property name="connection.url">jdbc:sqlite:Users.db</property>
+        <property name="connection.url">jdbc:sqlite:Entertainment.db</property>
         <property name="connection.username"></property>
         <property name="connection.password"></property>
         <property name="show_sql">true</property>
@@ -24,7 +24,9 @@
 
         <!-- add annotated resources here-->
 
-        <mapping class="es.formacion.cip.diego.entertainment.Films"/>
+        <mapping class="es.formacion.cip.diego.model.Films"/>
+        <mapping class="es.formacion.cip.diego.model.Series"/>
+
 
 
     </session-factory>

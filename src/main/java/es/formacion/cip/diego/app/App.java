@@ -1,5 +1,7 @@
-package es.formacion.cip.diego.entertainment;
+package es.formacion.cip.diego.app;
 
+import es.formacion.cip.diego.controller.HibernateUtil;
+import es.formacion.cip.diego.controller.Utilidades;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -17,7 +19,10 @@ public class App {
             Utilidades.addFilm("Geostorm", "08/02/2018", 6.5);
             Utilidades.addFilm("Crudo", "08/02/2018", 7);
 
+            Utilidades.addSerie("Breaking bad", "hoy", 9, 2);
+
             Utilidades.listTable("Films");
+            Utilidades.listTable("Series");
 
 
         } catch (HibernateException e) {
