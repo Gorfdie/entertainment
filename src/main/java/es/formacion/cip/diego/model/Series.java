@@ -27,20 +27,20 @@ public class Series {
     }
 
 
+    public int getTemporade() {
+        return temporade;
+    }
+
+    public void setTemporade(int temporade) {
+        this.temporade = temporade;
+    }
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public double getRate() {
-        return rate;
-    }
-
-    public void setRate(double rate) {
-        this.rate = rate;
     }
 
     public String getDate() {
@@ -51,11 +51,11 @@ public class Series {
         this.date = date;
     }
 
-    public int getTemporade() {
-        return temporade;
+    public double getRate() {
+        return rate;
     }
 
-    public void setTemporade(int temporade) {
-        this.temporade = temporade;
+    public void setRate(double rate) {
+        this.rate = rate;
     }
 }

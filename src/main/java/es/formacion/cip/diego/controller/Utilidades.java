@@ -20,7 +20,7 @@ public class Utilidades {
         try {
             tx = session.beginTransaction();
             List tables = session.createQuery("FROM "+ table).list();
-            System.out.println("-----------------------------------------------");
+            System.out.println("--------------------------------------------------------------------");
             if (table == "Films"){
 
                 for (Iterator iterator = tables.iterator(); iterator.hasNext();){
@@ -38,7 +38,7 @@ public class Utilidades {
                     System.out.println(" | Temporada: " + serie.getTemporade()+" |");
                 }
             }
-            System.out.println("-----------------------------------------------");
+            System.out.println("--------------------------------------------------------------------");
             tx.commit();
         } catch (HibernateException e) {
             if (tx!=null) tx.rollback();
@@ -55,8 +55,8 @@ public class Utilidades {
 
         try {
             tx = session.beginTransaction();
-            Films alumno = new Films(name, date, rate);
-            session.save(alumno);
+            Films films = new Films(name, date, rate);
+            session.save(films);
             tx.commit();
         } catch (HibernateException e) {
             if (tx!=null) tx.rollback();

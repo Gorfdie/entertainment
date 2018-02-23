@@ -19,7 +19,7 @@ public class App {
             Utilidades.addFilm("Geostorm", "08/02/2018", 6.5);
             Utilidades.addFilm("Crudo", "08/02/2018", 7);
 
-            Utilidades.addSerie("Breaking bad", "hoy", 9, 2);
+            Utilidades.addSerie("Breaking bad", "hoy", 8, 2);
 
             Utilidades.listTable("Films");
             Utilidades.listTable("Series");
